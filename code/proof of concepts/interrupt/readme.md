@@ -1,6 +1,8 @@
 # start/stop interrupt proof of concept
 minimale hard- en software die de correcte werking van een start/stop drukknop aantoont, gebruik makend van een hardware interrupt
 
+CODE:
+
 const int buttonPin = 2;  // Pin waarop de drukknop is aangesloten
 volatile bool buttonState = LOW;  // Variabele om de toestand van de drukknop bij te houden
 
