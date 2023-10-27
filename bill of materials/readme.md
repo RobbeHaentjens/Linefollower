@@ -7,7 +7,7 @@
 |         2|Motoren          | 50:1 micro metal gearmotor 6V |Nieuw          |3,5       |2      | 7,00        |
 |         3|Wielen    |32 x 7mm - pololu            |Nieuw           |2,62              |2      |4,64         |
 |         4|H-Brug    |DRV8833            |Nieuw           |2,85             |1      |2,85         |
-|         5|Sensor    |Arduino 8-Channel Infrarood Detector Hunt Module 8Bit Sensor Module            |Nieuw           |1,24              |1      |1,24         |
+|         5|Sensor    |QTR-8RC            |Nieuw           |1,24              |1      |1,24         |
 |         6|Communicatie    |HC-05            |Nieuw           |2,20              |1      |2,20        |
 |         7|    |            |           |              |      |         |
 
