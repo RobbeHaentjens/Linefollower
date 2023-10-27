@@ -10,14 +10,14 @@ minimale hard- & software die aantoont dat 2 motoren onafhankelijk van elkaar ku
 Adafruit_MS_PWMServoDriver pwm = Adafruit_MS_PWMServoDriver(0x60);
 
 // Definieer de pinnen voor Motor 1
-uint8_t pwmPinMotor1 = 9;  // PWM-pin voor Motor 1 (PWMA)
-uint8_t inPin1Motor1 = 2;  // INA1-pin voor Motor 1
-uint8_t inPin2Motor1 = 3;  // INA2-pin voor Motor 1
+uint8_t pwmPinMotor1 = 9;   // PWM-pin voor Motor 1 (PWMA)
+uint8_t ain1PinMotor1 = 2;  // Ain1-pin voor Motor 1
+uint8_t ain2PinMotor1 = 3;  // Ain2-pin voor Motor 1
 
 // Definieer de pinnen voor Motor 2
-uint8_t pwmPinMotor2 = 10; // PWM-pin voor Motor 2 (PWMB)
-uint8_t inPin1Motor2 = 4;  // INB1-pin voor Motor 2
-uint8_t inPin2Motor2 = 5;  // INB2-pin voor Motor 2
+uint8_t pwmPinMotor2 = 10;  // PWM-pin voor Motor 2 (PWMB)
+uint8_t bin1PinMotor2 = 4;  // Bin1-pin voor Motor 2
+uint8_t bin2PinMotor2 = 5;  // Bin2-pin voor Motor 2
 
 void setup() {
   // Initialiseer de Adafruit Motor Shield
@@ -25,31 +25,31 @@ void setup() {
   pwm.setPWMFreq(1600);  // PWM-frequentie instellen op 1.6 kHz (standaard)
   
   // Motor 1 vooruit met 50% snelheid
-  motorForward(pwmPinMotor1, inPin1Motor1, inPin2Motor1, 2048); // 2048 is de helft van het PWM-bereik (4096)
+  motorForward(pwmPinMotor1, ain1PinMotor1, ain2PinMotor1, 2048); // 2048 is de helft van het PWM-bereik (4096)
   delay(2000);  // Wacht 2 seconden
   
   // Motor 2 achteruit met 75% snelheid
-  motorBackward(pwmPinMotor2, inPin1Motor2, inPin2Motor2, 3072); // 3072 is 75% van het PWM-bereik
+  motorBackward(pwmPinMotor2, bin1PinMotor2, bin2PinMotor2, 3072); // 3072 is 75% van het PWM-bereik
   delay(2000);  // Wacht 2 seconden
   
   // Stop Motor 1
-  motorStop(pwmPinMotor1, inPin1Motor1, inPin2Motor1);
+  motorStop(pwmPinMotor1, ain1PinMotor1, ain2PinMotor1);
   delay(1000);  // Wacht 1 seconde
   
   // Stop Motor 2
-  motorStop(pwmPinMotor2, inPin1Motor2, inPin2Motor2);
+  motorStop(pwmPinMotor2, bin1PinMotor2, bin2PinMotor2);
 }
 
-void motorForward(uint8_t pwmPin, uint8_t inPin1, uint8_t inPin2, uint16_t speed) {
+void motorForward(uint8_t pwmPin, uint8_t ain1Pin, uint8_t ain2Pin, uint16_t speed) {
   pwm.setPWM(pwmPin, 0, speed);
-  digitalWrite(inPin1, HIGH);
-  digitalWrite(inPin2, LOW);
+  digitalWrite(ain1Pin, HIGH);
+  digitalWrite(ain2Pin, LOW);
 }
 
-void motorBackward(uint8_t pwmPin, uint8_t inPin1, uint8_t inPin2, uint16_t speed) {
+void motorBackward(uint8_t pwmPin, uint8_t bin1Pin, uint8_t bin2Pin, uint16_t speed) {
   pwm.setPWM(pwmPin, 0, speed);
-  digitalWrite(inPin1, LOW);
-  digitalWrite(inPin2, HIGH);
+  digitalWrite(bin1Pin, HIGH);
+  digitalWrite(bin2Pin, LOW);
 }
 
 void motorStop(uint8_t pwmPin, uint8_t inPin1, uint8_t inPin2) {
