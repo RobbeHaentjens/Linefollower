@@ -1,51 +1,43 @@
 # H-Bridge proof of concept
 
-minimale hard- & software die aantoont dat 2 motoren onafhankelijk van elkaar kunnen draaien, en (traploos) regelbaar zijn in snelheid en draairichting.
-
-#define AIN1 4
-#define AIN2 5
-#define BIN1 7
-#define BIN2 8
-
-void setup() {
-  Serial.begin(9600);
-  
-  pinMode(AIN1,OUTPUT);
-  pinMode(AIN2,OUTPUT);
-  pinMode(BIN1,OUTPUT);
-  pinMode(BIN2,OUTPUT);
-  
-}
- 
 void loop() {
   
-  digitalWrite(AIN1,HIGH); 
-  digitalWrite(AIN2,LOW);
-  digitalWrite(BIN1,HIGH); 
-  digitalWrite(BIN2,LOW);
+  // Vooruit draaien, motor 1
+  digitalWrite(STBY, HIGH);
+  analogWrite(motor1PWM1, 150); // Traploze snelheid, waarde tussen 0 en 255
+
+  delay(2000); // Wacht 2 seconden
+
+
+  // Stop motor 1
+  analogWrite(motor1PWM1, 0);
 
   delay(1000);
-  
-  digitalWrite(AIN1,LOW); 
-  digitalWrite(AIN2,LOW);
-  digitalWrite(BIN1,LOW); 
-  digitalWrite(BIN2,LOW);
-  
-  delay(1000);
-  
-  digitalWrite(AIN1,LOW); 
-  digitalWrite(AIN2,HIGH);
-  digitalWrite(BIN1,LOW); 
-  digitalWrite(BIN2,HIGH);
+
+  // Vooruit draaien, motor 2
+  analogWrite(motor2PWM1, 100);
+
+  delay(2000);
+
+
+
+  // Stop motor 2
+  analogWrite(motor2PWM1, 0);
 
   delay(1000);
-  
-  digitalWrite(AIN1,LOW); 
-  digitalWrite(AIN2,LOW);
-  digitalWrite(BIN1,LOW); 
-  digitalWrite(BIN2,LOW);
-  
-  delay(1000);
-   
+  // Achteruit draaien, motor 1
+  analogWrite(motor1PWM1, 255);
+    // Achteruit draaien, motor 2
+  analogWrite(motor2PWM1, 255);
+
+
+  delay(2000);
+
+    // Achteruit draaien, motor 1
+  analogWrite(motor1PWM1, 100);
+    // Achteruit draaien, motor 2
+  analogWrite(motor2PWM1, 100);
+
+
+  delay(2000);
 }
-
