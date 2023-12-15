@@ -9,5 +9,5 @@
 |         4|H-Brug    |DRV8833            |Nieuw           |2,85             |1      |2,85         |
 |         5|Sensor    |QTR-8RC            |Nieuw           |1,24              |1      |1,24         |
 |         6|Communicatie    |HC-05            |Nieuw           |2,20              |1      |2,20        |
-|         7|    |            |           |              |      |         |
+|         7|Plexie plaat    |120x70            | recup          |0              |1      | 0        |
 
