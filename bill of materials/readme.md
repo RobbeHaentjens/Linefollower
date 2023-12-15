@@ -10,4 +10,5 @@
 |         5|Sensor    |QTR-8RC            |Nieuw           |1,24              |1      |1,24         |
 |         6|Communicatie    |HC-05            |Nieuw           |2,20              |1      |2,20        |
 |         7|Plexie plaat    |120x70            | recup          |0              |1      | 0        |
+|         8|Breadboard   |MB-102            | Nieuw          |1,98              |1      | 1,98        |
 
