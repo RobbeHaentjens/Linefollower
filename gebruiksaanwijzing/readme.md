@@ -5,7 +5,7 @@ Dit project gebruikt 2 x 18650 Li-ion batterijen met de bij behorende lader, wan
 
 ### draadloze communicatie
 #### verbinding maken
-Draadloze communicatie is jammer genoeg niet gelukt in dit project doordat de HC-05 module niet compatiebel is met een Iphone, hierdoor heb ik me gefocust op het rijden van de auto dan het mogelijk te maken via bluetooth te communiceren.
+Draadloze communicatie is jammer genoeg niet gelukt in dit project doordat de HC-05 module niet compatiebel is met een Iphone, hierdoor heb ik me gefocust op het rijden van de auto dan het mogelijk te maken via bluetooth te communiceren. Om te communiceren met de robot gebruiken we een kabel die verbinding maakt met de arduino leonardo en de pc.
 
 #### commando's
 debug [on/off]   
@@ -21,6 +21,7 @@ De zwarte waardes worden gekalibreerd door de sensor te plaatsen boven het zwart
 
 ### settings
 De robot rijdt stabiel met volgende parameters:
+Cycle 500
 kp 12
 power 200
 diff 0,5
