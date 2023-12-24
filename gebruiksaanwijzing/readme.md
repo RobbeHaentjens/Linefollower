@@ -25,3 +25,6 @@ Cycle 500
 kp 12
 power 200
 diff 0,5
+
+### Start-stop
+Om de robot te starten steken we de dupont-draad van de voeding in het breadboard en om de robot te stoppen halen we deze er weer uit.
